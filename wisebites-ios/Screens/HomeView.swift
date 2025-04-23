@@ -189,8 +189,8 @@ struct RecipeSectionView: View {
     let onRecipeTap: (Recipe) -> Void
     let onViewAllTap: () -> Void
 
-    private let cardWidth: CGFloat = 180 // Width for the recipe cards
-    private let cardHeight: CGFloat = 240 // Height for the recipe cards
+    private let cardWidth: CGFloat = 160 // Reduced width
+    private let cardHeight: CGFloat = 240 // Adjusted height (taller than wide)
 
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
@@ -240,23 +240,22 @@ struct RecipeCardView: View {
                 Color.gray.opacity(0.3) // Placeholder background
                 // You could add a ProgressView here
             }
-            .frame(height: 150) // Fixed height for image consistency
-            .clipped()
+            .frame(height: 155) // Adjusted image height based on new image
+            .cornerRadius(10) // Round the image corners
+            .clipped() // Clip the image to its rounded frame
             .overlay(alignment: .topTrailing) {
                  // Placeholder for source logo/edit icon like in images
-                 Image(systemName: "book.closed.fill") // Example icon
+                 Image(systemName: "bookmark.fill") // Updated icon
                     .font(.caption)
                     .padding(5)
-                    .background(.thinMaterial)
-                    .clipShape(Circle())
-                    .padding(6)
+                    .background(.black.opacity(0.4)) // Darker background for better visibility
             }
 
 
             // Text Content
             VStack(alignment: .leading, spacing: 2) {
                 Text(recipe.name)
-                    .font(.headline)
+                    .font(.subheadline) // Smaller font for title
                     .lineLimit(2)
                     .fixedSize(horizontal: false, vertical: true) // Allow wrapping
 
@@ -266,20 +265,11 @@ struct RecipeCardView: View {
                         .font(.caption)
                         .foregroundColor(.secondary)
                 }
-                // Example: Display News+ tag (mock)
-                 Text("#News+")
-                    .font(.caption)
-                    .foregroundColor(.red) // Example styling
 
             }
-            .padding(.horizontal, 8)
             .padding(.bottom, 8)
-
-            Spacer() // Push text content up if needed
         }
-        .background(Color(uiColor: .secondarySystemGroupedBackground))
         .cornerRadius(10)
-        .shadow(color: .black.opacity(0.1), radius: 3, x: 0, y: 2)
     }
 }
 
