@@ -63,9 +63,6 @@ struct HomeView: View {
                             onViewAllTap: { navigateToCollection = collection }
                         )
                     }
-
-                    // Add Spacer at the bottom to ensure content scrolls above FAB
-                    Spacer(minLength: 100)
                 }
             }
             .navigationTitle("Recipe Catalog") // Title like Image 1
@@ -258,6 +255,7 @@ struct RecipeCardView: View {
                     .font(.subheadline) // Smaller font for title
                     .lineLimit(2)
                     .fixedSize(horizontal: false, vertical: true) // Allow wrapping
+                    .fontWeight(.semibold)
 
                  // Example: Display prep time
                 if let prepTime = recipe.prepTime, let cookTime = recipe.cookTime {
