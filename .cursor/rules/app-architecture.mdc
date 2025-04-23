@@ -1,0 +1,32 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# WiseBites iOS App Architecture
+
+## Application Flow
+
+The WiseBites iOS app follows a standard SwiftUI application structure:
+
+1. The application starts at [wisebites_iosApp.swift](mdc:wisebites-ios/wisebites_iosApp.swift) with the `@main` attribute
+2. The app struct conforms to the `App` protocol and defines the main scene
+3. The main scene sets [ContentView.swift](mdc:wisebites-ios/ContentView.swift) as the root view
+
+## Design Patterns
+
+The app uses SwiftUI's declarative UI paradigm where:
+- Views describe their appearance and behavior
+- State is separated from view logic
+- The view hierarchy is built using composition
+
+## SwiftUI Components
+
+The app primarily uses these SwiftUI components:
+- `VStack`: For vertical stacking of UI elements
+- `Image`: For displaying images
+- `Text`: For displaying text content
+
+## Navigation
+
+Currently, the app has a simple single-view structure. When navigation components are added, they will be documented here.

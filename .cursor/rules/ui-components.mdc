@@ -1,0 +1,39 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# WiseBites iOS UI Components
+
+## Main Views
+
+### ContentView
+
+[ContentView.swift](mdc:wisebites-ios/ContentView.swift) is the main view of the application.
+
+Current structure:
+- A `VStack` containing:
+  - An `Image` displaying a globe icon
+  - A `Text` displaying "Hello, world!!"
+- The stack has padding applied
+
+## Styling Patterns
+
+The app currently uses these styling approaches:
+- `.imageScale(.large)` for scaling images
+- `.foregroundStyle(.tint)` for tinting elements with the system color
+- `.padding()` for adding space around elements
+
+## Preview Support
+
+The app uses SwiftUI's `#Preview` macro to provide design-time previews of UI components. For example:
+
+```swift
+#Preview {
+    ContentView()
+}
+```
+
+## Asset Management
+
+UI assets are stored in [Assets.xcassets](mdc:wisebites-ios/Assets.xcassets) and can be referenced directly in Image views.

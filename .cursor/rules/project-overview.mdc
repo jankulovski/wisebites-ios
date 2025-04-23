@@ -1,0 +1,21 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# WiseBites iOS App Overview
+
+WiseBites is an iOS application built with SwiftUI. This rule provides an overview of the project structure.
+
+## Main Files
+
+- [wisebites_iosApp.swift](mdc:wisebites-ios/wisebites_iosApp.swift): The application entry point with the main App struct
+- [ContentView.swift](mdc:wisebites-ios/ContentView.swift): The main content view of the application
+
+## Project Directories
+
+- `wisebites-ios/`: Contains the main application code
+- `wisebites-ios/Assets.xcassets/`: Contains app assets and resources
+- `wisebites-iosTests/`: Contains unit tests for the app
+- `wisebites-iosUITests/`: Contains UI tests for the app
+- `wisebites-ios.xcodeproj/`: The Xcode project configuration files
